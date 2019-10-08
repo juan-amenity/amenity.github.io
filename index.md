@@ -1,24 +1,22 @@
-***Amenity On-Prem Setup*** 
-
+# Amenity On-Prem Setup # 
 In order to successfully install the Amenity on prem base solution, ensure that you have: 
 * 16 GB RAM or more on your machine
 * An access key and secret key provided by Amenity  
 * sudo access to your machine
 
-*Software prerequisite:*
+##### Software prerequisite:
 * Docker 18 or above (https://docs.docker.com/install)
 * Docker-compose 3.7 or above (https://docs.docker.com/compose/install/)
 * pip3 installed (https://pip.pypa.io/en/stable/)
-* AWS command Line Interface (CLI) tool installed (https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
-* User added to the docker group (sudo usermod -a -G docker $USER)
+* AWS Command Line Interface (CLI) tool installed (https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
+* User added to the Docker group (sudo usermod -a -G docker $USER)
 
 
-##### Verify docker is setup correctly 
+##### Verify Docker is setup correctly: 
 * Login as a non root user and run the next command `docker run hello-world` 
 to verify it returns with no errors
 
 # Setup #
-
 * Run `aws configure`
     * Provide the access key
     * Provide the secret key 
@@ -71,4 +69,4 @@ curl -X POST -d @1001.xml http://localhost:9090/api/v1/articles/000/000/analyzeT
 curl -L -o 1001.xml https://github.com/amenityllc/amenity.github.io/releases/download/1.0/1001.xml
 curl -X POST -d @1001.xml https://localhost:9443/api/v1/articles/000/000/analyzeText --verbose
 ```
-
+***
